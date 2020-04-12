@@ -1,3 +1,8 @@
+from telethon import events
+
+import asyncio
+
+
 @command(pattern="^.wel", outgoing=True)
 async def BA_welcome(event):
     if event.fwd_from:
