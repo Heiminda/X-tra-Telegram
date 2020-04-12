@@ -1,9 +1,9 @@
-"""Emoji
+"""Gives out some fun through messages. Try it out yourself!
 Available Commands:
-.emoji shrug
-.emoji apple
-.emoji :/
-.emoji -_-"""
+.solarsystem
+.ding
+.hack
+"""
 
 from telethon import events
 import asyncio
@@ -166,3 +166,83 @@ async def _(event):
         for i in animation_ttl:
             await asyncio.sleep(animation_interval)
             await event.edit(animation_chars[i % 549755813888])
+
+
+@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
+    animation_interval = 0.3
+
+    animation_ttl = range(0, 10)
+
+    input_str = event.pattern_match.group(1)
+
+    if input_str == "ding":
+
+        await event.edit(input_str)
+
+        animation_chars = [
+        
+            "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
+            "⬜⬜⬛⬜⬜\n⬜⬜⬛⬜⬜\n⬜⬜🔴⬜⬜",
+            "⬜⬜⬛⬜⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜⬜🔴",
+            "⬜⬜⬛⬛🔴\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",    
+            "⬜⬜⬛⬜⬜\n⬜⬜⬜⬛⬜\n⬜⬜⬜⬜🔴",
+            "⬜⬜⬛⬜⬜\n⬜⬜⬛⬜⬜\n⬜⬜🔴⬜⬜",
+            "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
+            "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
+            "⬜⬜⬜⬜⬜\n⬜ [BECOME A VIDHAYAK](https://github.com/Dark-Princ3/X-tra-Telegram/) ⬜\n⬜⬜⬜⬜⬜"
+
+ ]
+
+        for i in animation_ttl:
+
+            await asyncio.sleep(animation_interval)
+
+            await event.edit(animation_chars[i % 10])
+
+
+@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+
+async def _(event):
+
+    if event.fwd_from:
+
+        return
+
+    animation_interval = 2
+
+    animation_ttl = range(0, 11)
+
+    input_str = event.pattern_match.group(1)
+
+    if input_str == "hack":
+
+        await event.edit(input_str)
+
+        animation_chars = [
+        
+            "`Connecting To Hacked Private Server...`",
+            "`Target Selected.`",
+            "`Hacking... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
+            "`Hacking... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
+            "`Hacking... 100%\n█████████HACKED███████████ `",
+            "`Targeted Account Hacked...\n\nPay 69$ `"
+        ]
+
+        for i in animation_ttl:
+
+            await asyncio.sleep(animation_interval)
+
+            await event.edit(animation_chars[i % 11])
