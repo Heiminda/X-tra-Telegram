@@ -10,13 +10,13 @@ PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet nibba, check pinned message in** @XtraTgBot"
-USER_BOT_WARN_ZERO = "`You were spamming my master's inbox, henceforth your retarded lame ass has been blocked.` "
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set**"
+USER_BOT_WARN_ZERO = "`You were spamming, henceforth your retarded lame ass has been blocked.` "
 USER_BOT_NO_WARN = ("`Hello, You have found your way here to `"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
-                    "This is an automated message. If you are seeing this message then you are not approved to pm me.`\n\n"
-                    "**I don't reply to retards and don't welcome uninvited guests in PM.**"
-                    "If you are confident that you know me you can wait until I approve your PM")
+                    "She hates PM and reply only in group.\n\n"
+                    "**She don't reply to perverts nor like uninvited guests in PM.**"
+                    "You will be blocked and reported if you flood in PM")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
